@@ -1,0 +1,22 @@
+<h3 class="bg-dark text-white">{{titulo}}</h3>
+<!-- <div class="productos">
+    <div class="producto" *ngFor="let producto of productos" (click)="onClick(producto)">
+        <img [src]="producto.imgUrl" alt="">
+        <p>{{producto.nombre}}</p>
+        <p>{{producto.precio}} $</p>
+    </div>
+
+</div> -->
+<div class="productos">
+    <div class="card producto " *ngFor="let producto of productos">
+
+        <img class="card-img-top" [src]="producto.imgUrl" alt="Card image">
+        <div class="card-body">
+            <h5 class="card-title text-center">{{producto.nombre}}</h5>
+            <h5 class="card-text text-center">{{producto.precio}} $</h5>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" type="button" (click)="onClick(producto)">Agregar</button>
+            </div>
+
+        </div>
+    </div>

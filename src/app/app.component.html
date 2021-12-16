@@ -1,0 +1,11 @@
+<h1>Aplicación Restaurant</h1>
+<div class="container">
+    <div class="izquierda">
+        <app-lista-productos titulo="Comida" [productos]="arrComidas" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+        <app-lista-productos titulo="Bebida" [productos]="arrBebidas" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+        <app-lista-productos titulo="Postres" [productos]="arrPostres" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+    </div>
+    <div class="derecha">
+        <app-comanda [arrProductos]="productosSeleccionados"></app-comanda>
+    </div>
+</div>
